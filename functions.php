@@ -6,24 +6,19 @@
 function boston_treks_setup() {
 	add_theme_support( 'title-tag' );
 
-	register_nav_menus(
-		array(
-			'primary' => __( 'Primary Menu', 'tailpress' ),
-		)
-	);
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'tailpress' ),
+	) );
 
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		)
-	);
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 
-    add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
 
 	add_theme_support( 'align-wide' );
@@ -50,7 +45,7 @@ add_action( 'wp_enqueue_scripts', 'boston_treks_enqueue_scripts' );
 /**
  * Get asset path.
  *
- * @param string  $path Path to asset.
+ * @param string $path Path to asset.
  *
  * @return string
  */
@@ -59,15 +54,15 @@ function boston_treks_asset( $path ) {
 		return get_stylesheet_directory_uri() . '/' . $path;
 	}
 
-	return add_query_arg( 'time', time(),  get_stylesheet_directory_uri() . '/' . $path );
+	return add_query_arg( 'time', time(), get_stylesheet_directory_uri() . '/' . $path );
 }
 
 /**
  * Adds option 'li_class' to 'wp_nav_menu'.
  *
  * @param string  $classes String of classes.
- * @param mixed   $item The curren item.
- * @param WP_Term $args Holds the nav menu arguments.
+ * @param mixed   $item    The curren item.
+ * @param WP_Term $args    Holds the nav menu arguments.
  *
  * @return array
  */
@@ -89,8 +84,8 @@ add_filter( 'nav_menu_css_class', 'boston_treks_nav_menu_add_li_class', 10, 4 );
  * Adds option 'submenu_class' to 'wp_nav_menu'.
  *
  * @param string  $classes String of classes.
- * @param mixed   $item The curren item.
- * @param WP_Term $args Holds the nav menu arguments.
+ * @param mixed   $item    The curren item.
+ * @param WP_Term $args    Holds the nav menu arguments.
  *
  * @return array
  */

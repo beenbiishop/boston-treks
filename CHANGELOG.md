@@ -5,8 +5,10 @@ All notable changes to TailPress will be documented in this file.
 ## Unreleased
 
 ## 3.1.0
+
 - Tailwind font sizes are now set as defined in `theme.json`.
-- Breakpoints now based on WordPress defaults (https://developer.wordpress.org/block-editor/reference-guides/packages/packages-viewport/#usage).
+- Breakpoints now based on WordPress
+  defaults (https://developer.wordpress.org/block-editor/reference-guides/packages/packages-viewport/#usage).
 - Providing `w-content`, `max-w-content`, `w-wide` and `max-w-wide` utility classes.
 - Content width is now actually the width as defined in `theme.json`.
 - Fixing align wide, width as defined in `theme.json`.
@@ -28,7 +30,9 @@ All notable changes to TailPress will be documented in this file.
 - Removing `theme` subdirectory setup as it is no longer needed with the new build setup.
 - Removing `TailPress` class and it's functions (`tailpress()->get_header()` etc.) throughout the theme.
 - New `tailpress_asset` function to get the URL of an asset (previously `tailpress_mix`).
-- `tailpress_asset` function thaty appends a `time` parameter if [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) does not return `production` for cache busting (instead of the previously used versioned assets through `mix-manifest.json`).
+- `tailpress_asset` function thaty appends a `time` parameter
+  if [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) does not
+  return `production` for cache busting (instead of the previously used versioned assets through `mix-manifest.json`).
 - Update screenshot.png.
 - Remove `block-editor.css`, only use `editor-style.css`.
 - Moving `editor-style.css` from root to `css` directory.
@@ -92,10 +96,11 @@ All notable changes to TailPress will be documented in this file.
 ## 0.0.2 - 2020-11-24
 
 - Adding basic support for the block editor Gutenberg by generating alignment, font size and color classes.
-Contains four theme colors out of the box, being primary, secondary, dark and light. This is adjustable of course.
+  Contains four theme colors out of the box, being primary, secondary, dark and light. This is adjustable of course.
 - Loading a editor-style.css.
 - Removing double slashes on resulting manifest asset URLs.
-- Modified template files to have a better starting point (including horizontal main navigation, footer always at the bottom for short pages).
+- Modified template files to have a better starting point (including horizontal main navigation, footer always at the
+  bottom for short pages).
 - Added a basic 404 page template.
 
 ## 0.0.1 - 2020-11-19
