@@ -7,7 +7,8 @@ function boston_treks_setup() {
 	add_theme_support( 'title-tag' );
 
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'tailpress' ),
+		'main'    => __( 'Main Menu', 'boston_treks' ),
+		'profile' => __( 'Profile Menu', 'boston_treks' ),
 	) );
 
 	add_theme_support( 'html5', array(

@@ -5,7 +5,10 @@ const tailpress = require( "@jeffreyvr/tailwindcss-tailpress" );
 module.exports = {
 	content: [
 		'./*.php', './**/*.php', './resources/css/*.css', './resources/js/*.js', './safelist.txt'
-	], theme: {
+	], daisyui: {
+		themes: ["winter", "night"],
+		darkTheme: "night",
+	}, theme: {
 		container: {
 			padding: {
 				DEFAULT: '1rem', sm: '2rem', lg: '0rem'
@@ -22,6 +25,6 @@ module.exports = {
 			'2xl': '1440px'
 		}
 	}, plugins: [
-		tailpress.tailwind
+		require( "daisyui" ), tailpress.tailwind
 	]
 };

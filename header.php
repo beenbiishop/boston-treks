@@ -17,73 +17,81 @@
 
 	<?php do_action( 'boston_treks_header' ); ?>
 
-	<header>
-
-		<div class="mx-auto container">
-			<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
-				<div class="flex justify-between items-center">
-					<div>
-						<?php if ( has_custom_logo() ) { ?>
-							<?php the_custom_logo(); ?>
-						<?php } else { ?>
-							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-								<?php echo get_bloginfo( 'name' ); ?>
+	<header class="bg-base-100 text-base-content">
+		<div class="navbar container mx-auto">
+			<div class="navbar-start">
+				<div class="dropdown">
+					<label tabindex="0" class="btn btn-ghost lg:hidden">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+						     stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							      d="M4 6h16M4 12h8m-8 6h16"/>
+						</svg>
+					</label>
+					<ul tabindex="0"
+					    class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+						<li><a>Item 1</a></li>
+						<li tabindex="0">
+							<a class="justify-between">
+								Parent
+								<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								     viewBox="0 0 24 24">
+									<path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+								</svg>
 							</a>
-
-							<p class="text-sm font-light text-gray-600">
-								<?php echo get_bloginfo( 'description' ); ?>
-							</p>
-
-						<?php } ?>
-					</div>
-
-					<div class="lg:hidden">
-						<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-							<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1"
-							     xmlns="http://www.w3.org/2000/svg">
-								<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-									<g id="icon-shape">
-										<path
-											d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z"
-											id="Combined-Shape"></path>
-									</g>
-								</g>
+							<ul class="p-2 bg-base-200">
+								<li><a>Submenu 1</a></li>
+								<li><a>Submenu 2</a></li>
+							</ul>
+						</li>
+						<li><a>Item 3</a></li>
+					</ul>
+				</div>
+				<a class="btn btn-ghost normal-case text-xl"><?php echo get_bloginfo( 'name' ); ?></a>
+			</div>
+			<div class="navbar-center hidden lg:flex">
+				<ul class="menu menu-horizontal px-1">
+					<li><a>Item 1</a></li>
+					<li tabindex="0">
+						<a>
+							Parent
+							<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							     viewBox="0 0 24 24">
+								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
 							</svg>
 						</a>
-					</div>
+						<ul class="p-2 bg-base-100">
+							<li><a>Submenu 1</a></li>
+							<li><a>Submenu 2</a></li>
+						</ul>
+					</li>
+					<li><a>Item 3</a></li>
+				</ul>
+			</div>
+			<div class="navbar-end">
+				<div class="dropdown dropdown-end">
+					<label tabindex="0" class="btn btn-ghost btn-circle avatar">
+						<div class="w-10 rounded-full">
+							<img src="<?php echo get_avatar_url( get_current_user_id(), array( 'size' => 96 ) ); ?>>"/>
+						</div>
+					</label>
+					<ul tabindex="0"
+					    class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+						<li>
+							<a class="justify-between">
+								Profile
+								<span class="badge">New</span>
+							</a>
+						</li>
+						<li><a>Settings</a></li>
+						<li><a>Logout</a></li>
+					</ul>
 				</div>
-
-				<?php
-				wp_nav_menu( array(
-					'container_id'    => 'primary-menu',
-					'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-					'menu_class'      => 'lg:flex lg:-mx-4',
-					'theme_location'  => 'primary',
-					'li_class'        => 'lg:mx-4',
-					'fallback_cb'     => false,
-				) );
-				?>
 			</div>
 		</div>
 	</header>
 
 	<div id="content" class="site-content flex-grow">
-
-		<?php if ( is_front_page() ) { ?>
-			<!-- Start introduction -->
-			<div class="container mx-auto my-12 border-b pb-12">
-				<h1 class="font-bold text-lg text-secondary uppercase">TailPress</h1>
-				<h2 class="text-3xl lg:text-7xl tracking-tight font-extrabold my-4">Rapidly build your WordPress theme
-					with <a href="https://tailwindcss.com" class="text-primary">Tailwind CSS</a>.</h2>
-				<p class="max-w-screen-lg text-gray-700 text-lg font-medium mb-10">TailPress is your go-to starting
-					point for developing WordPress themes with TailwindCSS and comes with basic block-editor support out
-					of the box.</p>
-				<a href="https://github.com/jeffreyvr/tailpress"
-				   class="w-full sm:w-auto flex-none bg-gray-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
-					on Github</a>
-			</div>
-			<!-- End introduction -->
-		<?php } ?>
 
 		<?php do_action( 'boston_treks_content_start' ); ?>
 
