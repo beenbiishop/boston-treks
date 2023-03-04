@@ -35,3 +35,10 @@ body.admin-bar .primary-header {
 		@apply top-0;
 	}
 }
+
+/* Bottom Nav Active Color */
+.btm-nav > *:where(.active) {
+	border-top: none;
+	background-color: hsl(var(--p));
+	color: hsl(var(--pc));
+}
