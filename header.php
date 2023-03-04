@@ -5,6 +5,18 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="apple-touch-icon" sizes="180x180"
+	      href="<?php echo get_template_directory_uri() . '/images/favicons/apple-touch-icon.png'; ?>">
+	<link rel="icon" type="image/png" sizes="32x32"
+	      href="<?php echo get_template_directory_uri() . '/images/favicons/favicon-32x32.png'; ?>">
+	<link rel="icon" type="image/png" sizes="16x16"
+	      href="<?php echo get_template_directory_uri() . '/images/favicons/favicon-16x16.png'; ?>">
+	<link rel="manifest"
+	      href="<?php echo get_template_directory_uri() . '/images/favicons/site.webmanifest'; ?>">
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/images/favicons/safari-pinned-tab.svg'; ?>"
+	      color="#1e293b">
+	<meta name="msapplication-TileColor" content="#1e293b">
+	<meta name="theme-color" content="#1e293b">
 
 	<?php wp_head(); ?>
 </head>
