@@ -12,10 +12,11 @@
 	<link rel="icon" type="image/png"
 	      href="<?php echo get_template_directory_uri() . '/images/favicons/favicon.png'; ?>">
 	<link rel="manifest"
-	      href="<?php echo get_template_directory_uri() . '/images/favicons/site.webmanifest'; ?>">
+	      href="<?php echo get_template_directory_uri() . '/images/favicons/manifest.json'; ?>">
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/images/favicons/safari-pinned-tab.svg'; ?>"
 	      color="#1e293b">
-	<meta name="theme-color" content="#1e293b">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e293b">
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="021431">
 
 	<?php wp_head(); ?>
 </head>
