@@ -13,7 +13,7 @@
 
 <?php do_action( 'boston_treks_site_before' ); ?>
 
-<div id="page" class="min-h-screen flex flex-col overflow-x-hidden">
+<div id="page" class="min-h-screen flex flex-col overflow-x-hidden relative">
 
 	<?php do_action( 'boston_treks_header' ); ?>
 
