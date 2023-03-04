@@ -1,50 +1,26 @@
-article > *:not(.entry-content),
-.entry-content > * {
-	@apply mx-auto max-w-content;
+
+html {
+	@apply font-body;
 }
 
-.entry-content, .block-editor-block-list__layout {
-
-	h1 {
-		@apply text-2xl;
+[data-theme=''] {
+	.auto-button {
+		@apply active;
 	}
 
-	h2 {
-		@apply text-xl;
+	.auto-parent {
+		@apply inline-block;
 	}
+}
 
-	h3 {
-		@apply text-lg;
+[data-theme='night'] {
+	.dark-parent {
+		@apply inline-block;
 	}
+}
 
-	p, ul, ol {
-
-		a {
-			@apply text-blue-500 underline;
-
-			&
-			:hover {
-				@apply no-underline;
-			}
-
-		}
-
-		@apply mb-8;
-	}
-
-	ul:not(.block-editor-block-variation-picker__variations) {
-
-		li {
-			@apply list-disc list-inside;
-		}
-
-	}
-
-	ol {
-
-		li {
-			@apply list-decimal list-inside;
-		}
-
+[data-theme='winter'] {
+	.light-parent {
+		@apply inline-block;
 	}
 }

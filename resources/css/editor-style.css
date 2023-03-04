@@ -1,8 +1,10 @@
+@import url("https://use.typekit.net/pqx2ayt.css");
+
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 body {
-	@apply font-sans;
+	@apply font-body;
 }
 
 .wp-block {
