@@ -9,15 +9,15 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-base-100 text-base-content scroll-smooth transition-all duration-100 antialiased' ); ?>>
+<body <?php body_class( 'bg-base-100 text-base-content overflow-x-clip transition-all duration-100 antialiased' ); ?>>
 
 <?php do_action( 'boston_treks_site_before' ); ?>
 
-<div id="page" class="min-h-screen flex flex-col overflow-x-hidden relative">
+<div id="page" class="min-h-screen flex flex-col relative">
 
 	<?php do_action( 'boston_treks_header' ); ?>
 
-	<div
+	<header
 		class="sticky top-0 z-30 flex h-20 w-full justify-center bg-neutral text-neutral-content shadow-sm">
 		<nav class="navbar container mx-auto">
 			<div class="navbar-start">
@@ -182,7 +182,7 @@
 				} ?>
 			</div>
 		</nav>
-	</div>
+	</header>
 
 
 	<div id="content" class="site-content flex-grow">
