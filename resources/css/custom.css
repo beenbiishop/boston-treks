@@ -27,11 +27,11 @@ html {
 
 /* Admin Bar Fix */
 body.admin-bar .primary-header {
-	top: 32px;
+	@apply top-[32px];
 }
 
 @media all and (max-width: 782px) {
 	body.admin-bar .primary-header {
-		top: 46px;
+		@apply top-0;
 	}
 }

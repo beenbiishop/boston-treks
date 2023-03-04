@@ -91,7 +91,7 @@
 					</ul>
 				</div>
 				<div class="dropdown hidden md:block">
-					<span class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]" data-tip="menu">
+					<span class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]" data-tip="Menu">
 						<label tabindex="0" class="btn btn-ghost btn-square">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
 						     stroke="currentColor">
@@ -157,7 +157,9 @@
 				</a>
 			</div>
 			<div class="navbar-end">
-				<div title="Change Theme" class="dropdown dropdown-end hidden md:inline-block">
+				<div title="Change Theme"
+				     class="dropdown dropdown-end hidden md:inline-block tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]"
+				     data-tip="Theme">
 					<div tabindex="0" class="btn btn-ghost gap-1.5 normal-case">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
 						     class="light-parent hidden h-6 w-6"
