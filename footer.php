@@ -4,6 +4,13 @@
 
 </div>
 
+<footer id="colophon" class="footer footer-center p-4 bg-base-300 text-base-content" role="contentinfo">
+	<?php do_action( 'boston_treks_footer' ); ?>
+	<div>
+		<p>&copy; <?php echo date_i18n( 'Y' ) . ' ' . get_bloginfo( 'name' ); ?></p>
+	</div>
+</footer>
+
 <nav class="btm-nav sticky bottom-0 flex md:hidden bg-neutral text-neutral-content">
 	<a href="<?php echo home_url(); ?>"
 	   class="<?php echo is_front_page() || is_home() ? 'active' : ''; ?>">
