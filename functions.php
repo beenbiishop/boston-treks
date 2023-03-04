@@ -9,7 +9,6 @@ function boston_treks_setup() {
 	register_nav_menus( array(
 		'main'       => __( 'Main Menu', 'boston_treks' ),
 		'logged-out' => __( 'Logged Out Menu', 'boston_treks' ),
-		'profile'    => __( 'Profile Menu', 'boston_treks' ),
 	) );
 
 	add_theme_support( 'html5', array(
@@ -39,7 +38,7 @@ function boston_treks_enqueue_scripts() {
 	$theme = wp_get_theme();
 
 	wp_enqueue_style( 'tailpress', boston_treks_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', boston_treks_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tailpress', boston_treks_asset( 'js/app.js' ), array(), $theme->get( 'Version' ), true );
 }
 
 add_action( 'wp_enqueue_scripts', 'boston_treks_enqueue_scripts' );
