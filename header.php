@@ -21,7 +21,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-base-100 text-base-content overflow-x-clip transition-all duration-100 antialiased' ); ?>>
+<body <?php body_class( 'h-full bg-base-100 text-base-content overflow-x-clip transition-all duration-100 antialiased' ); ?>>
 
 <?php do_action( 'boston_treks_site_before' ); ?>
 
@@ -253,8 +253,8 @@
 	</header>
 
 
-	<div id="content" class="site-content flex-grow">
+	<div id="content" class="site-content flex flex-col flex-grow min-h-full">
 
 		<?php do_action( 'boston_treks_content_start' ); ?>
 
-		<main>
+		<main class="flex flex-col flex-grow min-h-full">

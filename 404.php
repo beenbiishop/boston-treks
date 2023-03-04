@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-
-	<?php wp_head(); ?>
-</head>
-<body class="antialiased">
-<div class="md:flex min-h-screen">
-	<div class="w-full md:w-1/2 flex items-center justify-center">
-		<div class="max-w-sm m-8">
-			<div class="text-5xl md:text-15xl text-gray-800 border-primary border-b">404</div>
-			<div class="w-16 h-1 bg-purple-light my-3 md:my-6"></div>
-			<p class="text-gray-800 text-2xl md:text-3xl font-light mb-8"><?php _e( 'Sorry, the page you are looking for could not be found.', 'tailpress' ); ?></p>
-			<a href="<?php echo get_bloginfo( 'url' ); ?>" class="bg-primary px-4 py-2 rounded text-white">
-				<?php _e( 'Go Home', 'tailpress' ); ?>
-			</a>
+<?php get_header(); ?>
+	<div class="flex-1 flex flex-col justify-center content-center text-accent">
+		<div class="block w-fit mx-auto text-center p-4">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-[30vh] max-w-[300px] mx-auto"
+			     viewBox="0 0 16 16">
+				<path
+					d="M7.03 1.88c.252-1.01 1.688-1.01 1.94 0l2.905 11.62H14a.5.5 0 0 1 0 1H2a.5.5 0 0 1 0-1h2.125L7.03 1.88z"/>
+			</svg>
+			<h1 class="mt-1 font-bold text-3xl lg:text-5xl font-display tracking-wide leading-tight">Oops! That page doesn't seem to exist.</h1>
+			<a class="mt-5 btn lg:btn-lg btn-accent" href="<?php echo home_url(); ?>">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 mr-2" viewBox="0 0 16 16">
+					<path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+					<path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+				</svg>
+				Back to Dashboard</a>
 		</div>
+
 	</div>
-</div>
-</body>
-</html>
+
+<?php
+get_footer();
