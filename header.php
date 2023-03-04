@@ -15,7 +15,7 @@
 	      href="<?php echo get_template_directory_uri() . '/images/favicons/site.webmanifest'; ?>">
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/images/favicons/safari-pinned-tab.svg'; ?>"
 	      color="#1e293b">
-	<meta name="theme-color" content="hsl(var(--n)/var(--tw-bg-opacity))">
+	<meta name="theme-color" content="#1e293b">
 
 	<?php wp_head(); ?>
 </head>
