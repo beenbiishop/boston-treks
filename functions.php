@@ -109,8 +109,3 @@ add_filter( 'nav_menu_submenu_css_class', 'boston_treks_nav_menu_add_submenu_cla
 add_action( 'customize_register', function ( $wp_customize ) {
 	$wp_customize->remove_control( 'site_icon' );
 }, 10, 1 );
-
-/* Function to check if bottom navbar should be displayed */
-function display_bottom_nav( $page_id = false ) {
-	return is_user_logged_in() && get_field( 'display_bottom_navigation' );
-}
