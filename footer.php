@@ -12,7 +12,7 @@
 </footer>
 
 <?php
-if ( display_bottom_nav() ) {
+if ( display_bottom_nav( get_queried_object_id() ) ) {
 	?>
 
 	<nav class="btm-nav sticky bottom-0 flex md:hidden bg-neutral text-neutral-content">
