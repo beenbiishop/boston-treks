@@ -6,14 +6,14 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="apple-touch-icon" sizes="180x180"
-	      href="<?php echo get_template_directory_uri() . '/images/favicons/apple-touch-icon.png'; ?>">
+	      href="<?php echo get_template_directory_uri() . '/assets/images/favicons/apple-touch-icon.png'; ?>">
 	<link rel="icon" type="image/svg+xml"
-	      href="<?php echo get_template_directory_uri() . '/images/favicons/favicon.svg'; ?>">
+	      href="<?php echo get_template_directory_uri() . '/assets/images/favicons/favicon.svg'; ?>">
 	<link rel="icon" type="image/png"
-	      href="<?php echo get_template_directory_uri() . '/images/favicons/favicon.png'; ?>">
+	      href="<?php echo get_template_directory_uri() . '/assets/images/favicons/favicon.png'; ?>">
 	<link rel="manifest"
-	      href="<?php echo get_template_directory_uri() . '/images/favicons/manifest.json'; ?>">
-	<link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/images/favicons/safari-pinned-tab.svg'; ?>"
+	      href="<?php echo get_template_directory_uri() . '/assets/images/favicons/manifest.json'; ?>">
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/assets/images/favicons/safari-pinned-tab.svg'; ?>"
 	      color="#1e293b">
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e293b">
 	<meta name="theme-color" media="(prefers-color-scheme: light)" content="021431">
