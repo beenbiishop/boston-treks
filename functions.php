@@ -37,8 +37,8 @@ add_action( 'after_setup_theme', 'boston_treks_setup' );
 function boston_treks_enqueue_scripts() {
 	$theme = wp_get_theme();
 
-	wp_enqueue_style( 'tailpress', boston_treks_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', boston_treks_asset( 'js/app.js' ), array(), $theme->get( 'Version' ), true );
+	wp_enqueue_style( 'tailpress', boston_treks_asset( 'assets/css/app.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tailpress', boston_treks_asset( 'assets/js/app.js' ), array(), $theme->get( 'Version' ), true );
 }
 
 add_action( 'wp_enqueue_scripts', 'boston_treks_enqueue_scripts' );
