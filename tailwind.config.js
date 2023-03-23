@@ -58,6 +58,6 @@ module.exports = {
 			]
 		}
 	}, plugins: [
-		require( '@tailwindcss/forms' ), require( "@tailwindcss/typography" ), require( "daisyui" ), tailpress.tailwind
+		require( "@tailwindcss/typography" ), require( "daisyui" ), tailpress.tailwind
 	]
 };

@@ -1,5 +1,10 @@
+/* Tailwind Base CSS */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Custom Styles */
 @import "custom.css";
+
+/* Custom Components */
+@import "./components/forms.css";
