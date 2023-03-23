@@ -46,3 +46,43 @@
 
 }
 
+#loginform {
+	@apply form-control w-full;
+
+	p:not(:last-child) {
+		@apply mb-3;
+	}
+
+	.login-username, .login-password {
+		@apply form-control w-full;
+
+		label {
+			@apply label label-text;
+		}
+
+		input {
+			@apply input input-bordered w-full;
+		}
+	}
+
+	.login-remember {
+		@apply form-control;
+
+		label {
+			@apply label cursor-pointer label-text flex flex-row justify-start;
+
+			input {
+				@apply checkbox mr-2;
+			}
+		}
+	}
+
+	.login-submit {
+		@apply form-control;
+
+		input {
+			@apply btn btn-primary inline-flex max-w-[150px];
+		}
+	}
+}
+
