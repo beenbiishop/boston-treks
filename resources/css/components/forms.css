@@ -1,1 +1,48 @@
 /* Forms Custom Styles */
+.jet-form-builder {
+
+	.jet-form-builder-row {
+		@apply form-control w-full;
+
+		&:not(:last-child) {
+			@apply mb-3;
+		}
+
+		input {
+			@apply input input-bordered w-full max-w-xs;
+		}
+
+		button {
+			@apply btn btn-primary;
+		}
+
+		&.field-has-error {
+			input {
+				@apply input-error;
+			}
+
+			.error-message {
+				@apply label label-text-alt text-error;
+			}
+		}
+
+		.jet-form-builder__label {
+			@apply label;
+
+			.jet-form-builder__label-text {
+				@apply label-text;
+			}
+		}
+
+		.jet-form-builder__desc {
+			@apply label;
+
+			small {
+				@apply label-text-alt;
+			}
+		}
+
+	}
+
+}
+
