@@ -111,3 +111,20 @@ add_filter( 'nav_menu_submenu_css_class', 'boston_treks_nav_menu_add_submenu_cla
 add_action( 'customize_register', function ( $wp_customize ) {
 	$wp_customize->remove_control( 'site_icon' );
 }, 10, 1 );
+
+/* Disable TML Registration Page & Dashboard Page */
+function disable_tml_registration_dashboard( $action ) {
+	if ( 'register' == $action || 'dashboard' == $action ) {
+		tml_unregister_action( $action );
+	}
+}
+
+add_action( 'tml_registered_action', 'disable_tml_registration_dashboard' );
+
+/* Register ACF Google Maps API Key */
+function my_acf_google_map_api( $api ) {
+	$api['key'] = 'AIzaSyCHHIxqEybzxK7RpHMphpBV5fhNgdGsNAM';
+
+	return $api;
+}
+add_filter( 'acf/fields/google_map/api', 'my_acf_google_map_api' );

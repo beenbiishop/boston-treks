@@ -1,3 +1,10 @@
+<?php
+if ( is_user_logged_in() && ! current_user_can( 'administrator' ) ) {
+	wp_redirect( home_url( '/dashboard' ) );
+	exit;
+}
+?>
+
 <?php get_header(); ?>
 
 	<style>
@@ -11,7 +18,7 @@
 		<div class="min-h-screen w-full md:mr-[50%] md:max-w-[50%] xl:mr-[60%] xl:max-w-[40%]">
 			<div class="py-12 px-8">
 				<div class="md:px-12">
-					<div class="w-fit mx-auto mb-4">
+					<div class="w-fit mx-auto mb-1 lg:mb-4">
 						<a class="btn btn-ghost w-auto max-w-full h-fit px-2 py-3"
 						   href="<?php echo home_url(); ?>">
 							<svg class="w-[250px] pr-2" xmlns="http://www.w3.org/2000/svg"
@@ -73,43 +80,13 @@
 							</svg>
 						</a>
 					</div>
-					<h2 class="text-center entry-title text-2xl md:text-4xl font-display tracking-wide leading-loose font-bold mb-3">
+					<h2 class="text-center entry-title text-2xl md:text-4xl font-display tracking-wide leading-loose font-bold mb-1 lg:mb-3">
 						Welcome back!</h2>
-					<p class="text-center mb-2">Don't have a Boston Treks account? <a class="link" href="/sign-up">Sign
+					<p class="text-center mb-1 lg:mb-2">Don't have a Boston Treks account? <a class="link" href="/sign-up">Sign
 							up</a></p>
 
-					<form class="loginform primary-login-form form-control" id="loginform"
-					      action="<?php echo home_url( '/wp-login.php' ); ?>"
-					      method="post">
-						<div class="login-row login-row-username form-control w-full">
-							<label class="label" for="user_login">
-								<span class="label-text">Email or Username</span>
-							</label>
-							<input type="text" name="log" id="user_login" autocomplete="username"
-							       class="input input-bordered w-full"
-							       value="" required>
-						</div>
-						<div class="login-row login-row-password form-control w-full">
-							<label class="label" for="user_pass">
-								<span class="label-text">Password</span>
-							</label>
-							<input type="password" name="pwd" id="user_pass" autocomplete="current-password"
-							       class="input input-bordered w-full"
-							       value="" required>
-						</div>
-						<div class="login-row login-row-remember form-control">
-							<label class="label cursor-pointer w-fit">
-								<span class="label-text mr-2">Remember me</span>
-								<input name="rememberme" type="checkbox" id="rememberme"
-								       value="forever" checked="checked" class="checkbox"></label>
-						</div>
-						<div class="login-row login-row-submit">
-							<input type="submit" name="wp-submit" id="wp-submit" class="btn btn-primary"
-							       value="Log In">
-							<input type="hidden" name="redirect_to" value="<?php echo home_url( '/dashboard' ); ?>">
-						</div>
+					<?php echo do_shortcode( '[theme-my-login action="login" show_links="0"]' ); ?>
 
-					</form>
 					<p class="mt-4 italic"><a class="link" href="/forgot-password">Forgot Password?</a></p>
 				</div>
 
@@ -118,7 +95,6 @@
 		<div
 			class="hidden md:block flex fixed inset-0 md:left-[50%] xl:left-[40%] justify-center bg-cover bg-center bg-no-repeat"
 			style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/auth-bg.jpg');">
-			<h2 class="text-2xl font-bold mb-4">Log In</h2>
 		</div>
 
 	</div>

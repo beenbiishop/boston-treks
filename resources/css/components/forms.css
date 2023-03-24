@@ -46,9 +46,82 @@
 
 }
 
-.primary-login-form {
-	.login-row:not(:last-child) {
-		@apply mb-3;
+.tml {
+	form {
+		@apply form-control w-full;
+
+		.tml-field-wrap {
+			&:not(:last-child) {
+				@apply mb-3;
+			}
+		}
+
+		.tml-log-wrap, .tml-user_login-wrap, .tml-pwd-wrap, .tml-pass1-wrap, .tml-pass2-wrap {
+			@apply form-control w-full;
+
+			.tml-label {
+				@apply label label-text;
+			}
+
+			input {
+				@apply input input-bordered w-full;
+			}
+
+		}
+
+		.tml-rememberme-wrap {
+
+			@apply flex flex-row w-full mt-2;
+
+			input {
+				@apply checkbox;
+			}
+
+			label {
+				@apply label cursor-pointer m-0 p-0 pl-2;
+			}
+		}
+
+		.tml-submit-wrap {
+			@apply mt-2 w-full;
+
+			button {
+				@apply btn btn-primary;
+			}
+		}
+
+		#pass-strength-result {
+			@apply m-0 mt-2 alert border-0 hidden;
+
+			&.empty {
+				@apply hidden;
+			}
+
+			&.short {
+				@apply flex alert-error;
+			}
+
+			&.bad, &.good {
+				@apply flex alert-warning;
+			}
+
+			&.strong {
+				@apply flex alert-success;
+			}
+		}
 	}
+
+	.tml-errors {
+		@apply mb-1 lg:mt-3;
+
+		.tml-error {
+			@apply alert alert-error justify-start gap-1 border-0;
+
+			&:last-child {
+				@apply mb-0;
+			}
+		}
+	}
+
 }
 

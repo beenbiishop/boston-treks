@@ -1,10 +1,3 @@
-<?php
-if ( is_user_logged_in() && ! current_user_can( 'administrator' ) ) {
-	wp_redirect( home_url( '/dashboard' ) );
-	exit;
-}
-?>
-
 <?php get_header(); ?>
 
 	<style>
@@ -12,6 +5,7 @@ if ( is_user_logged_in() && ! current_user_can( 'administrator' ) ) {
 			display: none;
 		}
 	</style>
+
 
 	<div class="block">
 		<div class="min-h-screen w-full md:mr-[50%] md:max-w-[50%] xl:mr-[60%] xl:max-w-[40%]">
@@ -80,14 +74,15 @@ if ( is_user_logged_in() && ! current_user_can( 'administrator' ) ) {
 						</a>
 					</div>
 					<h2 class="text-center entry-title text-2xl md:text-4xl font-display tracking-wide leading-loose font-bold mb-1 lg:mb-3">
-						Let's get started!</h2>
-					<p class="text-center mb-1 lg:mb-2">Sign up for a Boston Treks account to get started.</br>Already
-						signed
-						up? <a class="link" href="/login">Log in</a></p>
+						Set New Password</h2>
+					<p class="text-center mb-1 lg:mb-2">Enter your username or email and we'll send you instructions to reset
+						your password.</p>
 
-					<?php the_content(); ?>
-					<p class="mt-4 italic">By signing up, you accept our <a class="link" href="/terms">Terms of
-							Service</a> and <a class="link" href="/privacy-policy">Privacy Policy</a></p>
+					<?php echo do_shortcode( '[theme-my-login action="resetpass" show_links="0"]' ); ?>
+
+					<p class="mt-4 italic"><a class="link" href="/login">Log In</a> • <a class="link" href="/sign-up">Sign
+							Up</a></p>
+
 				</div>
 
 			</div>
