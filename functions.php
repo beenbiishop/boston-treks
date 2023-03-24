@@ -1,5 +1,7 @@
 <?php
 
+require_once( './secrets.php' );
+
 /**
  * Theme setup.
  */
@@ -123,8 +125,9 @@ add_action( 'tml_registered_action', 'disable_tml_registration_dashboard' );
 
 /* Register ACF Google Maps API Key */
 function my_acf_google_map_api( $api ) {
-	$api['key'] = 'AIzaSyCHHIxqEybzxK7RpHMphpBV5fhNgdGsNAM';
+	$api['key'] = GOOGLE_MAPS_API_KEY;
 
 	return $api;
 }
+
 add_filter( 'acf/fields/google_map/api', 'my_acf_google_map_api' );
