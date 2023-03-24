@@ -123,5 +123,17 @@
 		}
 	}
 
+	.tml-alerts {
+		@apply mb-1 lg:mt-3;
+
+		.tml-message {
+			@apply alert alert-info justify-start gap-1 border-0;
+
+			&:last-child {
+				@apply mb-0;
+			}
+		}
+	}
+
 }
 
